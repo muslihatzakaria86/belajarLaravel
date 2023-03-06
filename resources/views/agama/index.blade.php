@@ -1,47 +1,48 @@
 @extends('template/main')
 
 @section('views')
-@if(session()->has('success'))
-<div class="alert alert-success">
-	{{session('success')}}
-</div>
-@endif
-<div id="flashdata"></div>
-<div class="card">
-	<div class="card-header">
-		<div class="row justify-content-between">
-			<div class="col-3">
-                <div class="input-group">
-                    <input type="text" name="cari" class="form-control" id="form-search" placeholder="Cari data agama">
-                    <div class="input-group-append">
-                        <button class="btn btn-success" type="button" id="btn-search" onclick="reload()">
-                            <i class="fa fa-search"></i>
-                        </button>
+<div class="row">
+    <div class="col-lg-8">
+        @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{session('success')}}
+        </div>
+        @endif
+        <div id="flashdata"></div>
+        <div class="card">
+            <div class="card-header">
+                <div class="row justify-content-between">
+                    <div class="col-6">
+                        <div class="input-group">
+                            <input type="text" name="cari" class="form-control" id="form-search" placeholder="Cari data agama">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="button" id="btn-search" onclick="reload()">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="float-right">
+                            <a href="{{url("pengguna/form")}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
+                        </div>
                     </div>
                 </div>
-			</div>
-			<div class="col-3">
-
-			</div>
-			<div class="col-6">
-				<div class="float-right">
-					<a href="{{url("pengguna/form")}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="card-body table-responsive">
-		<table class="table table-bordered" id="table" style="width: 100%">
-			<thead>
-				<tr>
-					<th>No</th>
-					<th>Agama</th>
-					<th class="text-center">Aksi</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-	</div>
+            </div>
+            <div class="card-body table-responsive">
+                <table class="table table-bordered" id="table" style="width: 100%">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%">No</th>
+                            <th>Agama</th>
+                            <th class="text-center" style="width: 5%">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
