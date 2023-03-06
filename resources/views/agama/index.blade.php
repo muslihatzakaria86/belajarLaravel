@@ -11,9 +11,6 @@
 	<div class="card-header">
 		<div class="row justify-content-between">
 			<div class="col-3">
-
-			</div>
-			<div class="col-3">
                 <div class="input-group">
                     <input type="text" name="cari" class="form-control" id="form-search" placeholder="Cari data agama">
                     <div class="input-group-append">
@@ -22,6 +19,9 @@
                         </button>
                     </div>
                 </div>
+			</div>
+			<div class="col-3">
+
 			</div>
 			<div class="col-6">
 				<div class="float-right">
