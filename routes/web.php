@@ -20,3 +20,4 @@ Route::get('/', [BerandaController::class, 'index']);
 Route::get('dashboard', [BerandaController::class, 'index']);
 Route::get('provinsi', [ProvinsiController::class, 'index']);
 Route::get('agama', [AgamaController::class, 'index']);
+Route::post('/agama/listdata', [AgamaController::class, 'listData'])->name('agama.listData');
