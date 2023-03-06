@@ -61,7 +61,7 @@
 			},
 			"columnDefs": [{
 				"orderable": false,
-				"targets": [0, 3, 5, 6],
+				"targets": [0],
 			}],
 			columns: [
         {
