@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2023 at 07:52 AM
+-- Generation Time: Mar 06, 2023 at 04:53 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `lukman_tutorial_website_belajar_laravel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agama`
+--
+
+CREATE TABLE `agama` (
+  `id_agama` int(11) NOT NULL,
+  `agama` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -90,6 +101,12 @@ INSERT INTO `provinsi` (`id_provinsi`, `nama`) VALUES
 --
 
 --
+-- Indexes for table `agama`
+--
+ALTER TABLE `agama`
+  ADD PRIMARY KEY (`id_agama`);
+
+--
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
@@ -104,6 +121,12 @@ ALTER TABLE `provinsi`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `agama`
+--
+ALTER TABLE `agama`
+  MODIFY `id_agama` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
