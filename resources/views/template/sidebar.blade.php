@@ -40,6 +40,15 @@
           </a>
         </li>
         <!-- End Menu Provinsi -->
+
+        <!-- Menu Agama -->
+        <li class="nav-item">
+          <a href="{{url("agama")}}" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>Agama</p>
+          </a>
+        </li>
+        <!-- End Menu Agama -->
       </ul>
     </nav>
   </div>
