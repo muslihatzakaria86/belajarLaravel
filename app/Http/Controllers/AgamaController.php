@@ -48,4 +48,57 @@ class AgamaController extends Controller
                 ->make(true);
         }
     }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+     public function form(String $id = null)
+     {
+         $data = [
+             'title'    => 'Form Agama',
+             'data'     => $this->model->find(base64_decode($id))
+         ];
+         return view('agama.form', $data);
+     }
+
+
+     /**
+      * Store a newly created resource in storage.
+      *
+      * @param  \Illuminate\Http\Request  $request
+      * @return \Illuminate\Http\Response
+      */
+    public function store(Request $request)
+    {
+        $id = $request->get('id');
+        if ($id == null) {
+
+            $validate = $request->validate([
+                'agama'      => ['required', 'unique:agama'],
+            ]);
+
+            $this->model->create($validate);
+            return redirect('agama')->with('success', 'Berhasil simpan');
+        } else {
+            $validate['agama'] = $request->get('agama');
+
+            $this->model->where('id_agama', $id)->update($validate);
+
+            return redirect('agama')->with('success', 'Berhasil perbarui');
+        }
+    }
+     /**
+      * Remove the specified resource from storage.
+      *
+      * @param  int  $id
+      * @return \Illuminate\Http\Response
+      */
+    public function destroy(Request $request, $id)
+    {
+        $this->model->where('id_agama', base64_decode($id))->delete();
+        return redirect('agama')->with('success', 'Berhasil dihapus');
+    }
 }

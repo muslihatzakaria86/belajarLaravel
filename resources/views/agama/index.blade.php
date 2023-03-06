@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-6">
                         <div class="float-right">
-                            <a href="{{url("pengguna/form")}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
+                            <a href="{{url("agama/form")}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
                         </div>
                     </div>
                 </div>

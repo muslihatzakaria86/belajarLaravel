@@ -19,5 +19,11 @@ use App\Http\Controllers\AgamaController;
 Route::get('/', [BerandaController::class, 'index']);
 Route::get('dashboard', [BerandaController::class, 'index']);
 Route::get('provinsi', [ProvinsiController::class, 'index']);
+
+// Routes Data Agama
 Route::get('agama', [AgamaController::class, 'index']);
 Route::post('/agama/listdata', [AgamaController::class, 'listData'])->name('agama.listData');
+Route::get('/agama/form/{id}', [AgamaController::class, 'form']);
+Route::post('/agama', [AgamaController::class, 'store']);
+Route::get('/agama/form', [AgamaController::class, 'form']);
+Route::post('/agama/delete/{id}', [AgamaController::class, 'destroy']);
