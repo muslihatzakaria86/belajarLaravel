@@ -23,12 +23,23 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
       <li class="nav-item has-treeview">
+        <!-- Menu Dashboard -->
         <li class="nav-item">
           <a href="{{url("dashboard")}}" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
         </li>
+        <!-- End Menu Dashboard -->
+
+        <!-- Menu Provinsi -->
+        <li class="nav-item">
+          <a href="{{url("provinsi")}}" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>Provinsi</p>
+          </a>
+        </li>
+        <!-- End Menu Provinsi -->
       </ul>
     </nav>
   </div>

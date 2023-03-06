@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\ProvinsiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,5 @@ use App\Http\Controllers\BerandaController;
 */
 
 Route::get('/', [BerandaController::class, 'index']);
+Route::get('dashboard', [BerandaController::class, 'index']);
+Route::get('provinsi', [ProvinsiController::class, 'index']);
