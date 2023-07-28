@@ -1,5 +1,5 @@
-@extends('template/main')
-
+@extends('template/main') 
+  
 @section('views')
 <div class="row">
     <div class="col-lg-6 col-12">
