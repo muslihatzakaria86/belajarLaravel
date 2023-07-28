@@ -19,6 +19,7 @@ use App\Http\Controllers\AgamaController;
 Route::get('/', [BerandaController::class, 'index']);
 Route::get('dashboard', [BerandaController::class, 'index']);
 Route::get('provinsi', [ProvinsiController::class, 'index']);
+Route::get('provinsi', [ProvinsiController::class, 'index']);
 
 // Routes Data Agama
 Route::get('agama', [AgamaController::class, 'index']);
